@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+    <head>
+        <title>Location Intelligence Widget Demo | PR-5182</title>
+    </head>
+    <body bgcolor="#f8f8ff" class="valuation-widget">
+        <h1>Test</h1>
+        <script type="text/javascript" src="https://pr-5182.dev.application.espressoresearch.com/location-intelligence/widget.js"></script>
+        <div id="LocationIntelligenceWidget1"></div>
+        <script type="text/javascript">
+          window.Casafari.locationIntelligenceWidget({
+            "targetID": "LocationIntelligenceWidget1",
+            "lang": "de",
+            "key": "65dc9c0ecf979f4a5cb473cc",
+            "lat": 41.02108286309148,
+            "lng": -1.2755672762968069
+          });
+        </script>
+        <h1>Second</h1>
+        <div id="LocationIntelligenceWidget2">
+            <button onclick="() => window.Casafari.locationIntelligenceWidget({
+                'targetID': 'LocationIntelligenceWidget2',
+                'key': '65dc9c0ecf979f4a5cb473cc',
+                'lat': 38.7222524,
+                'lng': -9.1393366,
+                'pinRadius': 5000,
+            });">It's example of preloader</button>
+        </div>
+    </body>
+</html>

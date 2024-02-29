@@ -35,25 +35,63 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-xxl-6">
                             <div class="my-5">
-                                <h1 class="fw-bolder mb-3 text-center">Fast start of using Widget</h1>
+                                <h1 class="fw-bolder mb-3 text-center">Example of all available Widget's params.</h1>
                                 <p class="lead fw-normal text-muted mb-2 text-start">
-                                    It's minimal example of snippet Widget for use.
-                                    You should paste 3 required params:
+                                    Required params mark as `*`, all other are optional:
                                 </p>
                                 <ul class="text-left mb-2">
-                                    <li><code>key</code> - your widget key</li>
-                                    <li><code>lat</code> - latitude of estate</li>
-                                    <li><code>lng</code> - longitude of estate</li>
+                                    <li><code>key*</code> - your widget key</li>
+                                    <li><code>lat*</code> - latitude of estate</li>
+                                    <li><code>lng*</code> - longitude of estate</li>
+                                    <li>
+                                        <code>lang</code> - for hard set language of Widget.
+                                        </br>
+                                        <span class="badge bg-primary" onClick="alert(window.Casafari.LANGS[0])">*Default</span>
+                                        </br>
+                                        <span class="badge bg-primary" onClick="alert(JSON.stringify(window.Casafari.LANGS))">*Available</span>
+                                    </li>
+                                    <li>
+                                        <code>hideMarker</code> - hide marker of estate on the map.
+                                        </br>
+                                        <i>*Default: true</i>
+                                        </br>
+                                        <i>*Available: false</i>
+                                    </li>
+                                    <li>
+                                        <code>targetID</code> - ID of tag for render widget. Use it for render more than one widget at the page.
+                                        </br>
+                                        <i>*Default: `LocationIntelligenceWidget`</i>
+                                    </li>
                                 </ul>
                                 <hr>
                                 <pre><code>
 &lt;script type="text/javascript" src="https://casafari.local/location-intelligence/widget.js">&lt;/script&gt;
-&lt;div id="LocationIntelligenceWidget"&gt;&lt;/div&gt;
+&lt;div id="LocationIntelligenceWidget1"&gt;
+    Write here any what u want to ovverride default preloader...
+    &lt;div class="spinner-border text-primary" role="status"&gt;
+        &lt;span class="visually-hidden">Loading...&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;button id="render"&gt;Render Widget&lt;/button&gt;
+&lt;script type="text/javascript"&gt;
+    document.getElementById('render').onclick = () => window.Casafari.locationIntelligenceWidget({
+        "key": "{{YOUR_WIDGET_KEY}}",
+        "lat": 39.7222524,
+        "lng": -8.1393366,
+        "lang": "fr",
+        "hideMarker": false,
+        "targetID": "LocationIntelligenceWidget1",
+    });
+&lt;/script&gt;
+&lt;div id="LocationIntelligenceWidget2"&gt;&lt;/div&gt;
 &lt;script type="text/javascript"&gt;
     window.Casafari.locationIntelligenceWidget({
         "key": "{{YOUR_WIDGET_KEY}}",
         "lat": 38.7222524,
         "lng": -9.1393366,
+        "lang": "de",
+        "hideMarker": false,
+        "targetID": "LocationIntelligenceWidget2",
     });
 &lt;/script&gt;
                                 </code></pre>
@@ -65,27 +103,39 @@
             <!-- About section one-->
             <section class="py-5 bg-light" id="scroll-target">
                 <div class="container px-5 my-5">
+                    <div class="row gx-5 my-5 align-items-center">
+                        <div class="col-lg-9" id="LocationIntelligenceWidget1">
+                            Write here any what u want to ovverride default preloader...
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <button type="button" class="btn btn-primary" id="render">Render Widget</button>
+                        </div>
+                    </div>
                     <div class="row gx-5 align-items-center">
                         <div class="col-lg-12">
                             <script type="text/javascript" src="https://pr-5182.dev.application.espressoresearch.com/location-intelligence/widget.js"></script>
-                            <div id="LocationIntelligenceWidget"></div>
+                            <div id="LocationIntelligenceWidget2"></div>
                             <script type="text/javascript">
                                 window.Casafari.locationIntelligenceWidget({
                                     "key": "65dc9c0ecf979f4a5cb473cc",
                                     "lat": 38.7222524,
                                     "lng": -9.1393366,
+                                    "lang": "de",
+                                    "hideMarker": false,
+                                    "targetID": "LocationIntelligenceWidget2",
+                                });
+                                document.getElementById('render').onclick = () => window.Casafari.locationIntelligenceWidget({
+                                    "key": "65dc9c0ecf979f4a5cb473cc",
+                                    "lat": 39.7222524,
+                                    "lng": -8.1393366,
+                                    "lang": "fr",
+                                    "hideMarker": false,
+                                    "targetID": "LocationIntelligenceWidget1",
                                 });
                             </script>
-                        </div>
-                        <div class="col-lg-12">
-                            <h2 class="fw-bolder">Important</h2>
-                            <p class="lead fw-normal text-muted mb-0">
-                                Check html of page where you want to use widget.
-                                </br>
-                                Language of widget will be detected from tag: <code>&lt;html lang="en"&gt;</code>
-                                </br>
-                                Mobile responsibility will work correct with tag: <code>&lt;meta name="viewport" content="..., initial-scale=1" /&gt;</code>
-                            </p>
                         </div>
                     </div>
                 </div>

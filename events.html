@@ -35,15 +35,19 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-xxl-6">
                             <div class="my-5">
-                                <h1 class="fw-bolder mb-3 text-center">Fast start of using Widget</h1>
+                                <h1 class="fw-bolder mb-3 text-center">Handle Widget Events</h1>
                                 <p class="lead fw-normal text-muted mb-2 text-start">
-                                    It's minimal example of snippet Widget for use.
-                                    You should paste 3 required params:
+                                    What u need just add JS to handle it.
+                                    <span class="badge bg-primary" onClick="alert(window.Casafari.EVENTS)">available events</span>
                                 </p>
                                 <ul class="text-left mb-2">
-                                    <li><code>key</code> - your widget key</li>
-                                    <li><code>lat</code> - latitude of estate</li>
-                                    <li><code>lng</code> - longitude of estate</li>
+                                    <li>
+                                        <code>CASAFARI_WIDGET_EVENT_RESIZE</code> - on resize Widget.
+                                        </br>
+                                        <i>*Default: change iframe height, to get rid of the scroll.</i>
+                                        </br>
+                                        <i>*Example: when change mobile/desktop view.</i>
+                                    </li>
                                 </ul>
                                 <hr>
                                 <pre><code>
@@ -54,6 +58,13 @@
         "key": "{{YOUR_WIDGET_KEY}}",
         "lat": 38.7222524,
         "lng": -9.1393366,
+    });
+    window.addEventListener('message', (event) => {
+        console.log('Handle Widget's Event', event);
+        alert(JSON.stringify(event.data));
+        if (event.data.type === 'ANY_EVENT') {
+            // do smth
+        }
     });
 &lt;/script&gt;
                                 </code></pre>

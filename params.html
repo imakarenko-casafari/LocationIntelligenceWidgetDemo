@@ -62,6 +62,37 @@
                                         </br>
                                         <i>*Default: `LocationIntelligenceWidget`</i>
                                     </li>
+                                    <li>
+                                        <code>callbackUrl</code> - url for catch POST callback of event, client has submitted contact us form.
+                                        <div class="accordion accordion-flush" id="callbackUrlExample">
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header" id="flush-callbackUrlExample">
+                                                <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseCallbackBody" aria-expanded="false" aria-controls="flush-collapseCallbackBody">
+                                                    For testing we recommend use Webhook.site, see example.
+                                                </div>
+                                              </h2>
+                                              <div id="flush-collapseCallbackBody" class="accordion-collapse collapse" aria-labelledby="flush-callbackUrlExample" data-bs-parent="#callbackUrlExample">
+                                                <div class="accordion-body">
+                                                    <pre><code>
+{
+    "_id": "65e443513b4c62a7652325c5",
+    "widgetRequestId": "65e4433d3b4c62a7652325c4",
+    "form": {
+        "fullName": "eqweqwe",
+        "phoneNumber": "+380637365458",
+        "email": "ivan.makarenko@casafari.com",
+        "isPrivacyPolicy": "checked"
+    },
+    "url": "https://imakarenko-casafari.github.io/LocationIntelligenceWidgetDemo/params.html",
+    "createdAt": "2024-03-03T09:30:57.637Z",
+    "updatedAt": "2024-03-03T09:30:57.637Z",
+}
+                                                    </code></pre>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                                 <hr>
                                 <pre><code>

@@ -25,6 +25,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="events.html" title="Example for handle Widget's events">Events</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="customizations.html" title="Example of customizations">Customizations</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -114,24 +117,7 @@
                                 </ul>
                                 <hr>
                                 <pre><code>
-&lt;script type="text/javascript" src="https://casafari.local/location-intelligence/widget.js">&lt;/script&gt;
-&lt;div id="LocationIntelligenceWidget1"&gt;
-    Write here any what u want to ovverride default preloader...
-    &lt;div class="spinner-border text-primary" role="status"&gt;
-        &lt;span class="visually-hidden">Loading...&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;button id="render"&gt;Render Widget&lt;/button&gt;
-&lt;script type="text/javascript"&gt;
-    document.getElementById('render').onclick = () => window.Casafari.locationIntelligenceWidget({
-        "key": "{{YOUR_WIDGET_KEY}}",
-        "lat": 39.7222524,
-        "lng": -8.1393366,
-        "lang": "fr",
-        "hideMarker": false,
-        "targetID": "LocationIntelligenceWidget1",
-    });
-&lt;/script&gt;
+&lt;script type="text/javascript" src="https://casafari.com/location-intelligence/widget.js">&lt;/script&gt;
 &lt;div id="LocationIntelligenceWidget2"&gt;&lt;/div&gt;
 &lt;script type="text/javascript"&gt;
     window.Casafari.locationIntelligenceWidget({
@@ -140,6 +126,9 @@
         "lng": -9.1393366,
         "lang": "de",
         "hideMarker": false,
+        "pinRadius": 100,
+        "minZoom": 5,
+        "maxZoom": 10,
         "targetID": "LocationIntelligenceWidget2",
     });
 &lt;/script&gt;
@@ -152,20 +141,9 @@
             <!-- About section one-->
             <section class="py-5 bg-light" id="scroll-target">
                 <div class="container px-5 my-5">
-                    <div class="row gx-5 my-5 align-items-center">
-                        <div class="col-lg-9" id="LocationIntelligenceWidget1">
-                            Write here any what u want to ovverride default preloader...
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <button type="button" class="btn btn-primary" id="render">Render Widget</button>
-                        </div>
-                    </div>
                     <div class="row gx-5 align-items-center">
                         <div class="col-lg-12">
-                            <script type="text/javascript" src="https://pr-5182.dev.application.espressoresearch.com/location-intelligence/widget.js"></script>
+                            <script type="text/javascript" src="https://develop.dev.application.espressoresearch.com/location-intelligence/widget.js"></script>
                             <div id="LocationIntelligenceWidget2"></div>
                             <script type="text/javascript">
                                 window.Casafari.locationIntelligenceWidget({
@@ -174,15 +152,10 @@
                                     "lng": -9.1393366,
                                     "lang": "de",
                                     "hideMarker": false,
+                                    "pinRadius": 100,
+                                    "minZoom": 5,
+                                    "maxZoom": 10,
                                     "targetID": "LocationIntelligenceWidget2",
-                                });
-                                document.getElementById('render').onclick = () => window.Casafari.locationIntelligenceWidget({
-                                    "key": "65dc9c0ecf979f4a5cb473cc",
-                                    "lat": 39.7222524,
-                                    "lng": -8.1393366,
-                                    "lang": "fr",
-                                    "hideMarker": false,
-                                    "targetID": "LocationIntelligenceWidget1",
                                 });
                             </script>
                         </div>

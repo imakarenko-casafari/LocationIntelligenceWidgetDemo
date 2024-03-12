@@ -41,90 +41,75 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-xxl-6">
                             <div class="my-5">
-                                <h1 class="fw-bolder mb-3 text-center">Customize your widget</h1>
+                                <h1 class="fw-bolder mb-3 text-center">Issue #1: Widget not work</h1>
                                 <p class="lead fw-normal text-muted mb-2 text-start">
-                                    These are examples of solutions to the most common issues.
+                                    Check that domain of website is correct.
+                                    You should compare domain in settings with referrer in request headers (Browser).
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <a href="assets/screenshots/browser-referrer.png" target="_blank">
+                                    <img src="assets/screenshots/browser-referrer.png" alt="Browser referrer" style="width:100%">
+                                </a>
+                                <div class="caption">
+                                    <p>
+                                        Browser allways is right.
+                                        Is is auto add this field, and you can't change it.
+                                        </br>
+                                        <i>*Steps to get it:</i> F12 -> Network (tab) -> Select request (it will be subdocument to one of casafari domains).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <a href="assets/screenshots/settings-domains.png" target="_blank">
+                                    <img src="assets/screenshots/settings-domains.png" alt="Settings domains" style="width:100%">
+                                </a>
+                                <div class="caption">
+                                    <p>
+                                        Should add domains of site where you will use Widget.
+                                        A valid domain requires a host and must not include any path, port, query or fragment.
+                                        In this case paste <i>"imakarenko-casafari.github.io"</i>.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
             <!-- About section one-->
-            <section class="py-5 bg-light" id="load-on-click-preloader">
+            <!--<section class="py-5 bg-light" id="scroll-target">
                 <div class="container px-5 my-5">
                     <div class="row gx-5 align-items-center">
                         <div class="col-lg-12">
-                            <h2 class="fw-bolder text-center mb-3">Load on click & preloader</h2>
-                            <p class="lead fw-normal text-muted mb-2">
-                                You can run widget on eny JS event after page loaded.
-                                </br>
-                                For customization pre loader just add any code into tag wich will be target.
-                            </p>
-                        </div>
-                        <div class="col-lg-8">
                             <script type="text/javascript" src="https://develop.dev.application.espressoresearch.com/location-intelligence/widget.js"></script>
-                            <div id="LocationIntelligenceWidget1">
-                                Write here any what u want to ovverride default preloader...
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                                <button type="button" class="btn btn-primary" id="render">Render Widget</button>
-                                <script type="text/javascript">
-                                    document.getElementById('render').onclick = () => window.Casafari.locationIntelligenceWidget({
-                                        "key": "65dc9c0ecf979f4a5cb473cc",
-                                        "lat": 39.7222524,
-                                        "lng": -8.1393366,
-                                        "lang": "it",
-                                        "targetID": "LocationIntelligenceWidget1",
-                                    });
-                                </script>
-                                <style>
-                                    #LocationIntelligenceWidget1 {
-                                        display: flex;
-                                        flex-direction: column;
-                                        align-content: space-around;
-                                        align-items: center;
-                                        gap: 15px;
-                                    }
-                                </style>
-                            </div>
+                            <div id="LocationIntelligenceWidget"></div>
+                            <script type="text/javascript">
+                                window.Casafari.locationIntelligenceWidget({
+                                    "key": "65dc9c0ecf979f4a5cb473cc",
+                                    "lat": 38.7222524,
+                                    "lng": -9.1393366,
+                                });
+                            </script>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-12">
+                            <h2 class="fw-bolder">Important</h2>
                             <p class="lead fw-normal text-muted mb-0">
-                                <pre><code class="language-html">
-&lt;script type="text/javascript" src="https://casafari.com/location-intelligence/widget.js">&lt;/script&gt;
-&lt;div id="LocationIntelligenceWidget1"&gt;
-    Write here any what u want to ovverride default preloader...
-    &lt;div class="spinner-border text-primary" role="status"&gt;
-        &lt;span class="visually-hidden">Loading...&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;button type="button" class="btn btn-primary" id="render"&gt;Render Widget&lt;/button&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
-    document.getElementById('render').onclick = () => window.Casafari.locationIntelligenceWidget({
-        "key": "{{YOUR_WIDGET_KEY}}",
-        "lat": 39.7222524,
-        "lng": -8.1393366,
-        "lang": "it",
-        "targetID": "LocationIntelligenceWidget1",
-    });
-&lt;/script&gt;
-&lt;style&gt;
-    #LocationIntelligenceWidget1 {
-        display: flex;
-        flex-direction: column;
-        align-content: space-around;
-        align-items: center;
-        gap: 15px;
-    }
-&lt;/style&gt;
-                                </code></pre>
+                                Check html of page where you want to use widget.
+                                </br>
+                                Language of widget will be detected from tag: <code>&lt;html lang="en"&gt;</code>
+                                </br>
+                                Mobile responsibility will work correct with tag: <code>&lt;meta name="viewport" content="..., initial-scale=1" /&gt;</code>
                             </p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </main>
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">

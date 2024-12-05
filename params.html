@@ -59,45 +59,49 @@
                                     <li>
                                         <code>hideMarker</code> - hide marker of estate on the map.
                                         </br>
-                                        <i>*Default: true</i>
+                                        <i><strong>*Default:</strong> `true`</i>
                                         </br>
-                                        <i>*Available: false</i>
+                                        <i><strong>*Available Values:</strong> `false`</i>
                                     </li>
                                     <li>
                                         <code>pinRadius</code> - Sets the radius in metters of estate intead marker.
                                         </br>
-                                        <i>*Default: 1000</i>
+                                        <i><strong>*Default:</strong> `1000`</i>
                                         </br>
-                                        <i>*Available: 0 - for disable</i>
+                                        <i><strong>*Available Values:</strong> any positive integer, `0` - for disable</i>
                                     </li>
                                     <li>
                                         <code>minZoom</code> - Sets the map's minimum zoom level. Other factors such as map height may restrict zooming.
                                         </br>
-                                        <i>*Default: -2</i>
+                                        <i><strong>*Default:</strong> `-2`</i>
                                     </li>
                                     <li>
                                         <code>maxZoom</code> - Sets the map's maximum zoom level. Must be greater than the `minZoom`.
                                         </br>
-                                        <i>*Default: 22</i>
+                                        <i><strong>*Default:</strong> `22`</i>
                                     </li>
                                     <li>
                                         <code>targetID</code> - ID of tag for render widget. Use it for render more than one widget at the page.
                                         </br>
-                                        <i>*Default: `LocationIntelligenceWidget`</i>
+                                        <i><strong>*Default:</strong> `LocationIntelligenceWidget`</i>
                                     </li>
                                     <li>
-                                        <code>locationScore</code> - options of Location Score component on the right bottom coner of map. Use for sort and filter categories.
+                                        <code>locationScore</code> - Configuration option for the Location Score component displayed in the bottom-right corner of the map. This setting is used to sort and filter categories.
                                         </br>
-                                        <i>*Default: ['cafe', 'nightlife', 'restaurant', 'pharmacy', 'groceries', 'shopping'] or false for disable</i>
+                                        <i><strong>*Default:</strong> `['cafe', 'nightlife', 'restaurant', 'pharmacy', 'groceries', 'shopping']`</i>
                                         </br>
-                                        <i>*Available: array of any categories from default list, as example: `['shopping', 'cafe']` or `false` for disable component</i>
+                                        <i><strong>*Available Values:</strong></i>
+                                        <ul>
+                                            <li>An array of categories from the default list, e.g., `['shopping', 'cafe']`</li>
+                                            <li>`false` to disable the component entirely.</li>
+                                        </ul>
                                     </li>
                                     <li>
-                                        <code>isMenuOpen</code> - option to open the menu upon widget load.
+                                        <code>isMenuOpen</code> - Determines whether the menu should be open when the widget loads.
                                         </br>
-                                        <i>*Default: true</i>
+                                        <i><strong>*Default:</strong> `true`</i>
                                         </br>
-                                        <i>*Available: false</i>
+                                        <i><strong>*Available Values:</strong> `false`</i>
                                     </li>
                                     <li>
                                         <code>callbackUrl</code> - url for catch POST callback of event, client has submitted contact us form.

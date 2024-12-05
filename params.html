@@ -86,6 +86,13 @@
                                         <i>*Default: `LocationIntelligenceWidget`</i>
                                     </li>
                                     <li>
+                                        <code>locationScore</code> - options of Location Score component on the right bottom coner of map. Use for sort and filter categories.
+                                        </br>
+                                        <i>*Default: `['cafe', 'nightlife', 'restaurant', 'pharmacy', 'groceries', 'shopping']` or `false for disable`</i>
+                                        </br>
+                                        <i>*Available: array of any categories from default list, as example: `['shopping', 'cafe']` or `false` for disable component.</i>
+                                    </li>
+                                    <li>
                                         <code>callbackUrl</code> - url for catch POST callback of event, client has submitted contact us form.
                                         <div class="accordion accordion-flush" id="callbackUrlExample">
                                             <div class="accordion-item">
@@ -133,6 +140,7 @@
         "minZoom": 5,
         "maxZoom": 10,
         "targetID": "LocationIntelligenceWidget2",
+        "locationScore": ["cafe", "nightlife", "restaurant", "pharmacy", "groceries", "shopping"],
     });
 &lt;/script&gt;
                                 </code></pre>
